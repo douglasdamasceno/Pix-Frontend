@@ -1,11 +1,12 @@
 import Button from './components/Button'
 import Header from './components/Header'
+import SideBar from './components/SideBar'
 
 function App() {
   
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <Button
         // width={162}
         // height={48}
@@ -15,6 +16,7 @@ function App() {
       >
         Adicionar saldo
       </Button>
+      <SideBar />
     </div>
   )
 }
