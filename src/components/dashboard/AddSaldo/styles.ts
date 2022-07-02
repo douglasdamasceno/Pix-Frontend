@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 34px;
-  /* justify-content: center; */
+  gap: 175px;
 `;
 
 export const Title = styled.h1`
@@ -26,4 +26,7 @@ export const PaymentMethods = styled.div`
   gap: 82px;
 `;
 
-export const ContainerButtons = styled.div``;
+export const ContainerButtons = styled.div`
+  display: flex;
+  gap: 50px;
+`;
