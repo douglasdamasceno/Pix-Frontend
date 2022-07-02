@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
+  padding-top: 34px;
   /* justify-content: center; */
 `;
 
@@ -18,3 +19,11 @@ export const Title = styled.h1`
 
   color: #bdbdbd;
 `;
+
+export const PaymentMethods = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 82px;
+`;
+
+export const ContainerButtons = styled.div``;

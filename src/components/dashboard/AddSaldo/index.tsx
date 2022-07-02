@@ -1,29 +1,35 @@
 import { useState } from 'react';
-import { Container, Title } from './styles'
+import { Container, ContainerButtons, PaymentMethods, Title } from './styles'
+import PaymentMethod from '../../ui/Select';
+import Input from '../../ui/Input';
 
 export default function AddSaldo() {
-    const [formPayment, setFormPayment] = useState("");
-    return (
-      <Container>
-          <Title>Adicionar saldo</Title>
-          <div>
-              <label>
-                Forma de pagamento  
-              </label>
-                <select
-                    name="pay"
-                    value={formPayment}
-                    onChange={value => setFormPayment(value.target.value)} >
-                    <option value="">Selecione uma forma de pagamento</option>
-                    <option value="1">Pix</option>
-                    <option value="2">TED</option>
-                  </select>           
-              <label>
-                Valor  
-                <input />           
-              </label>
-          </div>
+  const [formPayment, setFormPayment] = useState("");
+  const [amount, setAmount] = useState("");
+  console.log(formPayment);  
+  console.log(amount);  
+  return (
+    <Container>
+      <Title>Adicionar saldo</Title>
+      <PaymentMethods>
+        <PaymentMethod
+          label='Forma de pagamento'
+          name="pay"
+          value={formPayment}
+          onChange={(event:any ) => setFormPayment(event.target.value)}
+        >
+          <option value="1">Pix</option>
+          <option value="2">TED</option>
+        </PaymentMethod>           
+        <Input
+          label='Valor'
+          value={amount}
+          onChangeAmount={setAmount}
+        />
+      </PaymentMethods>
+      <ContainerButtons>
 
+      </ContainerButtons>
     </Container>
   )
 }
