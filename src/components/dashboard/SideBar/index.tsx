@@ -1,7 +1,7 @@
-import IconMenu  from "../../assets/icon-park-outline_menu.svg";
-import IconAvatar  from "../../assets/avatar.svg";
-import IconMoney  from "../../assets/money.svg";
-import IconLogout from "../../assets/log-out.svg";
+import IconMenu  from "../../../assets/icon-park-outline_menu.svg";
+import IconAvatar  from "../../../assets/avatar.svg";
+import IconMoney  from "../../../assets/money.svg";
+import IconLogout from "../../../assets/log-out.svg";
 
 import { Container, Divider, NavBottom, NavTop } from "./styles";
 import { ItemSideBar } from "../ItemSideBar";

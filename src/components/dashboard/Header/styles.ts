@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: baseline;
   /* background: #4f4f4f; */
@@ -13,7 +14,7 @@ export const PageTitle = styled.h1`
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
-
+  padding-left: 40px;
   color: #424242;
 `;
 
