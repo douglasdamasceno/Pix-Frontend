@@ -9,6 +9,8 @@ import columns from '../../components/dashboard/Table/data/columns'
 import data from '../../components/dashboard/Table/data/data'
 
 import { Container, Main } from './styles'
+import PopUp from '../../components/dashboard/PopUp'
+import QRCode from '../../components/dashboard/QRCode'
 
 export default function App() {
   
@@ -26,7 +28,7 @@ export default function App() {
         showModal={showModal}
         setShowModal={setShowModal}
       >
-        <AddSaldo />
+        <QRCode />
       </Modal>
       <Main>
         <Header />

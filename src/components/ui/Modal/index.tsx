@@ -1,6 +1,5 @@
 import { ModalContainer, ModalWrapper,CloseModalButton,CloseModal } from './styles';
-import IconCloseModal from "../../assets/close.svg";
-  
+ 
 interface ModalProps { 
   showModal: boolean;
   setShowModal: (showModal: boolean) => void;
