@@ -18,5 +18,5 @@ export const Message = styled.h1`
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3rem;
-  color: #424242;
+  color: ${({ theme }) => theme.colors.title};
 `;

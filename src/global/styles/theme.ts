@@ -6,15 +6,20 @@ export default {
     secondary: "#FF872C",
     secondary_light: "rgba(255,135,44,0.3)",
 
-    sucess: "#12A454",
-    sucess_light: "rgba(18,164,84,0.3)",
+    positive: "#00ad17",
 
-    attention: "#E83F5B",
-    attention_light: "rgba(232,63,91,0.5)",
+    negative: "#e87779",
 
-    shape: "#ffffff",
-    title: "#363F5F",
-    text: "#969CB2",
-    background: "#F0F2F5",
+    white: "#ffffff",
+    black: "#000000",
+
+    title: "#424242",
+    text: "#bdbdbd",
+
+    text_label: "#757575",
+    text_input: "#cccccc",
+
+    background_dark: "#eeeeee",
+    border_color: "#cbcbcb",
   },
 };

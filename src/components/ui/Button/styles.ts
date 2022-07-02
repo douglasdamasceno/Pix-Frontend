@@ -13,9 +13,9 @@ const ButtonDefault = styled.button<ContainerProps>`
   height: ${({ height }) => height || "68px"};
 
   background: ${({ theme, primary }) =>
-    primary ? theme.colors.primary : theme.colors.shape};
+    primary ? theme.colors.primary : theme.colors.white};
   color: ${({ theme, primary }) =>
-    primary ? theme.colors.shape : theme.colors.primary};
+    primary ? theme.colors.white : theme.colors.primary};
 
   border: ${({ primary }) => primary && "none"};
   border-color: ${({ theme }) => theme.colors.primary};
@@ -24,8 +24,7 @@ const ButtonDefault = styled.button<ContainerProps>`
     background: ${({ theme, primary }) =>
       primary ? theme.colors.primary_light : theme.colors.primary};
 
-    color: ${({ theme, primary }) =>
-      primary ? theme.colors.shape : theme.colors.shape};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 

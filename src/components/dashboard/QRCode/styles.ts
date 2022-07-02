@@ -24,7 +24,7 @@ export const Header = styled.div`
   width: 100%;
 `;
 
-export const Title = styled.h1`
+export const Message = styled.h1`
   font-size: 1rem;
   width: 125px;
   height: 24px;
@@ -32,13 +32,14 @@ export const Title = styled.h1`
   font-weight: 400;
   line-height: 24px;
 
-  color: #bdbdbd;
+  color: ${({ theme }) => theme.colors.text};
 `;
-export const Message = styled.h1`
+
+export const Title = styled.h1`
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3rem;
-  color: #424242;
+  color: ${({ theme }) => theme.colors.title};
 `;
 
 export const ImgQRCode = styled.img`

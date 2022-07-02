@@ -5,17 +5,14 @@ export const Container = styled.header`
   width: 100%;
   justify-content: space-between;
   align-items: baseline;
-  /* background: #4f4f4f; */
 `;
 
 export const PageTitle = styled.h1`
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 48px;
   padding-left: 40px;
-  color: #424242;
+  color: ${({ theme }) => theme.colors.title};
 `;
 
 export const Card = styled.div`
@@ -26,7 +23,7 @@ export const Card = styled.div`
   height: 88px;
   padding: 16px;
 
-  background: #ffffff;
+  background: ${({ theme }) => theme.colors.white};
 
   box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -40,31 +37,17 @@ export const CardAmout = styled.div`
 `;
 
 export const CardTitle = styled.h4`
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 32px;
-  /* identical to box height, or 114% */
-
-  /* text-align: right; */
-
-  /* Grey/G800 */
-
-  color: #424242;
+  color: ${({ theme }) => theme.colors.title};
 `;
 
 export const CardValue = styled.h4`
-  /* Heading/H600 */
-
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  /* identical to box height, or 117% */
-
-  color: #00ad17;
+  color: ${({ theme }) => theme.colors.positive};
 `;
 
 export const TransactionCard = styled.div`
@@ -73,29 +56,16 @@ export const TransactionCard = styled.div`
 `;
 
 export const TransactionPositive = styled.h4`
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
-  /* identical to box height, or 150% */
-
-  /* text-align: right; */
-
-  color: #424242;
+  color: ${({ theme }) => theme.colors.title};
 `;
 
 export const TransactionNegative = styled.h4`
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
-  /* identical to box height, or 150% */
 
-  /* text-align: right; */
-
-  /* Red/R400 */
-
-  color: #e87779;
+  color: ${({ theme }) => theme.colors.negative};
 `;

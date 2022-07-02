@@ -9,26 +9,23 @@ export const Container = styled.div`
     font-weight: 400;
     font-size: 1rem;
     line-height: 24px;
-    /* identical to box height, or 150% */
 
     display: flex;
     align-items: center;
 
-    color: #757575;
+    color: ${({ theme }) => theme.colors.text_label};
   }
 `;
 
 export const Select = styled.select`
   display: flex;
   padding: 14px 16px;
-  /* width: 100%; */
   width: 423px;
   height: 48px;
 
-  background: #ffffff;
-  /* Outline/Default */
+  background: ${({ theme }) => theme.colors.white};
 
-  border: 1px solid #cbcbcb;
+  border: 1px solid ${({ theme }) => theme.colors.border_color};
   border-radius: 8px;
 
   option {

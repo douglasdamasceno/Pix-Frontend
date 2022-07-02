@@ -17,7 +17,7 @@ export const Title = styled.h1`
   font-weight: 400;
   line-height: 24px;
 
-  color: #bdbdbd;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const PaymentMethods = styled.div`

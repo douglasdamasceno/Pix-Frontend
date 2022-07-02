@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const ContainerValue = styled.div`
   padding: 0.5rem 1rem;
 
-  background: #eeeeee;
+  background: ${({ theme }) => theme.colors.background_dark};
   border-radius: 4px 0px 0px 4px;
 
   font-weight: 400;
@@ -17,7 +17,7 @@ export const ContainerValue = styled.div`
   line-height: 18px;
   display: flex;
   align-items: center;
-  color: #000000;
+  color: ${({ theme }) => theme.colors.black};
 `;
 export const ButtonCopy = styled.button`
   cursor: pointer;

@@ -6,9 +6,8 @@ export const ContainerStyles = styled.div`
   padding: 20px;
   width: 1273px;
   height: 787px;
-  /* Grey/G50 */
 
-  background: #ffffff;
+  background: ${({ theme }) => theme.colors.white};
 
   box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -26,16 +25,16 @@ export const ContainerStyles = styled.div`
     width: 192px;
     height: 44px;
 
-    border-bottom: 1px solid #ff7e2e;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
 
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
 
-    color: #424242;
+    color: ${({ theme }) => theme.colors.title};
   }
   tr {
-    border-bottom: 2px solid #424242;
+    border-bottom: 2px solid ${({ theme }) => theme.colors.title};
     height: 34px;
   }
 
@@ -52,16 +51,9 @@ export const ContainerStyles = styled.div`
       border-radius: 4px;
       border: none;
 
-      font-family: "Poppins";
-      font-style: normal;
       font-weight: 700;
       font-size: 14px;
       line-height: 18px;
-      /* identical to box height, or 129% */
-
-      display: flex;
-      align-items: center;
-      text-align: center;
 
       color: #b78811;
     }
@@ -73,5 +65,5 @@ export const TableData = styled.td`
   font-size: 16px;
   line-height: 24px;
   /* border-bottom: 1px solid #424242; */
-  color: #424242;
+  color: ${({ theme }) => theme.colors.title};
 `;

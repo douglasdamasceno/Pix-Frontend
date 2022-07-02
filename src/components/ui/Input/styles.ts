@@ -14,7 +14,7 @@ export const Label = styled.label`
   display: flex;
   align-items: center;
 
-  color: #757575;
+  color: ${({ theme }) => theme.colors.text_label};
 `;
 
 export const Input = styled.input`
@@ -22,7 +22,7 @@ export const Input = styled.input`
   height: 48px;
 
   padding: 8px 16px;
-  background: #ffffff;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
-  border: 1px solid #cbcbcb;
+  border: 1px solid ${({ theme }) => theme.colors.border_color};
 `;

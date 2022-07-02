@@ -19,9 +19,10 @@ export default function App() {
   const openModal = () => {
     setShowModal(preve => !preve);
   }  
-
+//remover padding do container pra ajuste modal
   return (
     <Container>
+      
       <SideBar />
       <Button onClick={openModal}>Adicionar saldo</Button>
       <Modal

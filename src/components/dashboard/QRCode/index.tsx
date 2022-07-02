@@ -7,8 +7,8 @@ export default function QRCode() {
   return (
       <Styles.Container>
           <Styles.Header>
-            <Styles.Title>QRCode</Styles.Title>
-            <Styles.Message>QRCode Gerado!</Styles.Message>
+            <Styles.Message>QRCode</Styles.Message>
+            <Styles.Title>QRCode Gerado!</Styles.Title>
           </Styles.Header>  
           <div id="copyClip">    
             <Styles.ImgQRCode src={IconQRCode} alt="QRCode" />
