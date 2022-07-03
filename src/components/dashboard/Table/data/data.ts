@@ -10,7 +10,7 @@ const data = [
   },
   {
     id: 2,
-    destino: "ADespesa",
+    destino: "Despesa",
     valor: "R$150,00",
     solicitacao: "28/02/2022 23:30",
     pagamentos: "PIX/Ted",

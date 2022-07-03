@@ -6,20 +6,17 @@ interface ModalProps {
   children: React.ReactNode;
 }
 
-export default function Modal({showModal, setShowModal,children}: ModalProps) {
+export default function Modal({ showModal, setShowModal, children }: ModalProps) {
+  if(!showModal) return null;
   return (
     <>
-      {showModal ?
-        <ModalContainer>
-          <ModalWrapper>
-            {/* <CloseModalButton
-              onClick={() => setShowModal(prev => !prev)}
-              src={IconCloseModal} />
-            <CloseModal onClick={() => setShowModal(prev => !prev)}/> */}
-              {children}  
+      {showModal && (
+        <ModalContainer onClick={() => setShowModal(!showModal)}>
+          <ModalWrapper onClick={(event) => event.stopPropagation()}>
+            {children}
           </ModalWrapper>
-        </ModalContainer> :
-      null}
+        </ModalContainer>
+      )}
     </>
   )
 }

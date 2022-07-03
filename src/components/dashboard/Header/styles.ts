@@ -5,6 +5,12 @@ export const Container = styled.header`
   width: 100%;
   justify-content: space-between;
   align-items: baseline;
+
+  @media (max-width: 810px) {
+    & {
+      flex-direction: column;
+    }
+  }
 `;
 
 export const PageTitle = styled.h1`

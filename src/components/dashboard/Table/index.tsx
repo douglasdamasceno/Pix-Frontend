@@ -1,11 +1,9 @@
 import { useTable,useSortBy } from 'react-table';
 import Sort from "../../../assets/sort.svg"
-import Date from "../../../assets/calendar.svg"
 import PayCode from "../../../assets/pay-code-one.svg"
-import Copy from "../../../assets/copy.svg"
-import InputWithIcon from '../../ui/InputWithIcon';
-import { ContainerStyles,TableData } from './styles';
-import Button from '../../ui/Button';
+import Copy from "../../../assets/icon-park-outline_copy.svg"
+import { ActionButtons, ContainerTable,TableData } from './styles';
+
 
 
 interface TableProps {
@@ -28,20 +26,7 @@ const Table = ({ columns, data }:TableProps) => {
     );
 
 	return (
-		<ContainerStyles>
-			<div style={{display:'flex'}}>
-				<InputWithIcon />
-				<InputWithIcon icon={Date} placeholder="Pesquisar data" />
-
-				 <Button
-                   width="162px"
-                   height="48px"
-                   primary
-                   onClick={() => console.log(`ddd`)}
-                  >
-                 Adicionar saldo
-                </Button>
-			</div>
+		<ContainerTable>
 			<table {...getTableProps()}>
 				<thead>
 					{headerGroups.map(
@@ -70,10 +55,10 @@ const Table = ({ columns, data }:TableProps) => {
 											<>
 												{console.log(cell)}
 												{cell.column.Header === '' ?
-													<div>
+													<ActionButtons>
                                                      <img src={Copy} alt="Copy" />
                                                      <img src={PayCode} alt="Pay Code" />
-													</div>
+													</ActionButtons>
 													: 
 													<div>
 														{cell.render('Cell')}
@@ -88,7 +73,7 @@ const Table = ({ columns, data }:TableProps) => {
 					})}
 				</tbody>
 			</table>
-		</ContainerStyles>
+		</ContainerTable>
 	);
 };
 
