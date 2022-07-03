@@ -24,7 +24,6 @@ export const Container = styled.div`
     padding: 20px;
 
     width: 100%;
-    /* height: 100%; */
     height: 523px;
 
     background: #ffffff;
@@ -32,9 +31,6 @@ export const Container = styled.div`
   }
   thead {
     border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
-  }
-  tbody {
-    /* border-bottom: 1px solid ${({ theme }) => theme.colors.black}; */
   }
 
   th {
@@ -63,7 +59,6 @@ export const Container = styled.div`
 
     color: ${({ theme }) => theme.colors.title};
 
-    /* border-bottom: 2px solid ${({ theme }) => theme.colors.title}; */
     :nth-last-child(2) {
       display: flex;
       justify-content: center;
@@ -82,22 +77,19 @@ export const Container = styled.div`
 
       color: #b78811;
     }
-    /* @media (max-width: 868px) {
-            display: block;
-        } */
+    @media (max-width: 868px) {
+      padding: 0;
+    }
   }
 `;
 
 export const ContainerTable = styled.section`
-  /* display: flex;
-  flex-direction: column; */
-  overflow-y: auto;
+  overflow-x: auto;
 `;
 export const TableData = styled.td`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  /* border-bottom: 1px solid #424242; */
   color: ${({ theme }) => theme.colors.title};
 `;
 export const ActionButtons = styled.div`
@@ -111,7 +103,6 @@ export const ContainerPagination = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  /* align-self: center; */
 `;
 export const PreviewPage = styled.img`
   cursor: pointer;

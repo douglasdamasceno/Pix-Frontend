@@ -10,7 +10,7 @@ export const Container = styled.header`
     margin-top: 14px;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
+    align-items: flex-start;
   }
 `;
 
@@ -52,7 +52,7 @@ export const CardTitle = styled.h4`
 
 export const CardValue = styled.h4`
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 28px;
   color: ${({ theme }) => theme.colors.positive};
 `;

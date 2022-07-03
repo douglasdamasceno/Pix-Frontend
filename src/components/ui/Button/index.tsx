@@ -7,15 +7,17 @@ type Props = {
     width?: string,
     height?: string,
     primary?: boolean,
+    type?: "button" | "submit" | "reset",
 }
 
-const Button: React.FC<Props> = ({ children, onClick, width,height,primary }:Props)=> {
+const Button: React.FC<Props> = ({ children, onClick, width,height,primary,type }:Props)=> {
   return (
     <Style.Container
       width={width}
       onClick={onClick}
       primary={primary}
       height={height}
+      type={type || 'button'}
     >
       {children}
     </Style.Container>

@@ -5,7 +5,7 @@ import SideBar from '../../components/dashboard/SideBar'
 import Table from '../../components/dashboard/Table'
 import AddSaldo from '../../components/dashboard/AddSaldo'
 import columns from '../../components/dashboard/Table/data/columns'
-import data from '../../components/dashboard/Table/data/data'
+import dataMock from '../../components/dashboard/Table/data/data'
 
 import { Container, Main } from './styles'
 import PopUp from '../../components/dashboard/PopUp'
@@ -15,6 +15,7 @@ export default function App() {
   const [showAddSaldo, setShowAddSaldo] = useState(false);
   const [showGRCode, setShowGRCode] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
+  const [data,setData] = useState(dataMock);
   const [search, setSearch] = useState('');
 
   const openAddSaldo = () => {
@@ -33,6 +34,7 @@ export default function App() {
           setShowModal={setShowAddSaldo}
         >
           <AddSaldo
+            addValue={setData}
             onCloseModal={openAddSaldo}
             onOpenQRCode={openModalShowQRCode}
           />

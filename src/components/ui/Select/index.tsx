@@ -5,7 +5,7 @@ interface SelectProps {
     children: React.ReactNode;
     name: string;
     value: string;
-    onChange: () => void;
+  onChange: (value:string) => void;
 }
 
 export default function Select({label, children,name,onChange,value}: SelectProps) {
@@ -15,7 +15,7 @@ export default function Select({label, children,name,onChange,value}: SelectProp
           <Style.Select
             name={name}
             value={value}
-            onChange={onChange}
+            onChange={event => onChange(event.target.value)}
           >
             {children}
         </Style.Select>     
