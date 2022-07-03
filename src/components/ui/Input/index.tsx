@@ -3,7 +3,7 @@ import * as Style from './styles'
 interface InputProps {
     label: string;
     value: string;
-    onChangeAmount?: (newValue:string) => void;
+    onChangeAmount: (newValue:string) => void;
  }
 
 export default function Input({label,value,onChangeAmount}: InputProps) {
