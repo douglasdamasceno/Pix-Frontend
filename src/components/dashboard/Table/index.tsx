@@ -1,5 +1,5 @@
 import { useTable, useSortBy } from "react-table";
-import Sort from "../../../assets/sort.svg";
+import IconSort from "../../../assets/sort.svg";
 import IconPreviewPage from "../../../assets/Pagination-left.svg";
 import IconNextPage from "../../../assets/Pagination-right.svg";
 import PayCode from "../../../assets/pay-code-one.svg";
@@ -50,7 +50,7 @@ const Table = ({ columns, data, onClick }: TableProps) => {
                   >
                     {column.render("Header")}
                     <span style={{ marginLeft: 7 }}>
-                      {column.Header !== "" && <img src={Sort} />}
+                      {column.Header !== "" && <img src={IconSort} />}
                     </span>
                   </th>
                 ))}
