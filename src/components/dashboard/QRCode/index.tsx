@@ -3,7 +3,18 @@ import Button from "../../ui/Button";
 import CopyClipBoard from "../../ui/CopyClipBoard";
 import * as Styles from './styles'
 
-export default function QRCode() {
+interface QRCodeProps {
+    onCloseModal: () => void;
+    onOpenPopUp: () => void;
+ }
+
+export default function QRCode({ onCloseModal, onOpenPopUp }: QRCodeProps) {
+    
+    const handleCopyClip = () => { 
+        onCloseModal();
+        onOpenPopUp();
+    }
+    
   return (
       <Styles.Container>
           <Styles.Header>
@@ -12,13 +23,13 @@ export default function QRCode() {
           </Styles.Header>  
           <div id="copyClip">    
             <Styles.ImgQRCode src={IconQRCode} alt="QRCode" />
-            <CopyClipBoard />
+            <CopyClipBoard onClick={handleCopyClip} />
           </div>
           <Button
               primary
               width="563px"
               height="68px"
-              onClick={() => { }}>
+              onClick={onCloseModal}>
               Fechar
           </Button>
     </Styles.Container>

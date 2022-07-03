@@ -13,6 +13,8 @@ export default {
     white: "#ffffff",
     black: "#000000",
 
+    page: "#1f4883",
+
     title: "#424242",
     text: "#bdbdbd",
 

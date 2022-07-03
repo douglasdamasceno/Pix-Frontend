@@ -1,4 +1,7 @@
 import styled from "styled-components";
+interface PageProps {
+  selected?: boolean;
+}
 
 export const ContainerTable = styled.div`
   min-width: 1193px;
@@ -14,6 +17,15 @@ export const ContainerTable = styled.div`
   border-radius: 10px; */
 
   table {
+    min-width: 1193px;
+    height: 523px;
+    /* width: 100%; */
+    padding: 20px;
+    /* width: 1273px;
+  height: 787px; */
+
+    background: ${({ theme }) => theme.colors.white};
+
     /* border-collapse: separate; */
   }
   thead {
@@ -73,4 +85,33 @@ export const ActionButtons = styled.div`
     cursor: pointer;
   }
   gap: 12px;
+`;
+
+export const ContainerPagination = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* align-self: center; */
+`;
+export const PreviewPage = styled.img`
+  cursor: pointer;
+`;
+export const NextPage = styled.img`
+  cursor: pointer;
+`;
+
+export const Page = styled.h5<PageProps>`
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 48px;
+  height: 56px;
+  border-radius: 8px;
+
+  color: ${({ theme, selected }) =>
+    selected ? theme.colors.white : theme.colors.black};
+  background: ${({ theme, selected }) =>
+    selected ? theme.colors.page : theme.colors.white};
 `;

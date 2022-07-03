@@ -1,17 +1,21 @@
 import { useTable,useSortBy } from 'react-table';
 import Sort from "../../../assets/sort.svg"
+import IconPreviewPage from "../../../assets/Pagination-left.svg"
+import IconNextPage from "../../../assets/Pagination-right.svg"
 import PayCode from "../../../assets/pay-code-one.svg"
 import Copy from "../../../assets/icon-park-outline_copy.svg"
-import { ActionButtons, ContainerTable,TableData } from './styles';
+import { ActionButtons, ContainerPagination, ContainerTable,NextPage,Page,PreviewPage,TableData } from './styles';
+import NavBar from './NavBar';
 
 
 
 interface TableProps {
     columns: any;
-    data: any;
+	data: any;
+	onClick:()=>void;
  }
 
-const Table = ({ columns, data }:TableProps) => {
+const Table = ({ columns, data,onClick }:TableProps) => {
 	const {
 		getTableProps,
 		getTableBodyProps,
@@ -27,6 +31,7 @@ const Table = ({ columns, data }:TableProps) => {
 
 	return (
 		<ContainerTable>
+			<NavBar onClick={onClick} />
 			<table {...getTableProps()}>
 				<thead>
 					{headerGroups.map(
@@ -73,6 +78,9 @@ const Table = ({ columns, data }:TableProps) => {
 					})}
 				</tbody>
 			</table>
+			<ContainerPagination>
+				<PreviewPage src={IconPreviewPage} /> <Page selected>1</Page><Page>2</Page><NextPage src={IconNextPage} />
+			</ContainerPagination>
 		</ContainerTable>
 	);
 };

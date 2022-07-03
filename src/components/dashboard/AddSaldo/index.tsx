@@ -4,11 +4,22 @@ import PaymentMethod from '../../ui/Select';
 import Input from '../../ui/Input';
 import Button from '../../ui/Button';
 
-export default function AddSaldo() {
+interface IAddAmount{
+  onCloseModal: () => void;
+  onOpenQRCode: () => void;
+}
+
+export default function AddSaldo({onCloseModal,onOpenQRCode}:IAddAmount) {
   const [formPayment, setFormPayment] = useState("");
   const [amount, setAmount] = useState("");
   console.log(formPayment);  
   console.log(amount);  
+
+  const handleGRCode = () => {
+    onCloseModal();
+    onOpenQRCode();
+  }
+
   return (
     <Container>
       <Title>Adicionar saldo</Title>
@@ -30,7 +41,7 @@ export default function AddSaldo() {
       </PaymentMethods>
       <ContainerButtons>
         <Button
-          onClick={() => { }}
+          onClick={onCloseModal}
           width='256px'
           height='68px'
         >
@@ -38,7 +49,7 @@ export default function AddSaldo() {
         </Button>
         <Button
           primary
-          onClick={() => { }}
+          onClick={handleGRCode}
           width='256px'
           height='68px'
         >

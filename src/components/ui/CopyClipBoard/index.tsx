@@ -3,13 +3,17 @@ import * as Styles  from './styles';
 
 import IconCopy from "../../../assets/copy.svg";
 
-export default function CopyClipBoard() {
+interface CopyClipBoardProps { 
+    onClick: () => void;
+}
+
+export default function CopyClipBoard({onClick}:CopyClipBoardProps) {
   return (
       <Styles.Container>
             <Styles.ContainerValue>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique potenti bibendum Lorem ipsum dolor
           </Styles.ContainerValue>
-          <Styles.ButtonCopy>
+          <Styles.ButtonCopy onClick={onClick}>
               <img src={IconCopy} alt="Copy" />
           </Styles.ButtonCopy>
     </Styles.Container>

@@ -22,25 +22,25 @@ export const Main = styled.main`
   border-radius: 10px; */
 `;
 
-export const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  gap: 40px;
+// export const Section = styled.section`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 40px;
+//   gap: 40px;
 
-  /* position: absolute; */
-  /* width: 1273px; */
-  width: 100%;
-  height: 787px;
-  /* left: 133px;
-  top: 206px; */
+//   /* position: absolute; */
+//   /* width: 1273px; */
+//   width: 100%;
+//   height: 787px;
+//   /* left: 133px;
+//   top: 206px; */
 
-  /* Grey/G50 */
+//   /* Grey/G50 */
 
-  background: #ffffff;
-  /* S200 */
+//   background: #ffffff;
+//   /* S200 */
 
-  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-`;
+//   box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.1);
+//   border-radius: 10px;
+// `;
