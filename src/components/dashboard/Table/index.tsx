@@ -4,7 +4,7 @@ import IconPreviewPage from "../../../assets/Pagination-left.svg"
 import IconNextPage from "../../../assets/Pagination-right.svg"
 import PayCode from "../../../assets/pay-code-one.svg"
 import Copy from "../../../assets/icon-park-outline_copy.svg"
-import { ActionButtons, ContainerPagination, ContainerTable,NextPage,Page,PreviewPage,TableData } from './styles';
+import { ActionButtons, Container, ContainerPagination, ContainerTable,NextPage,Page,PreviewPage,TableData } from './styles';
 import NavBar from './NavBar';
 
 
@@ -30,9 +30,10 @@ const Table = ({ columns, data,onClick }:TableProps) => {
     );
 
 	return (
-		<ContainerTable>
-			<NavBar onClick={onClick} />
-			<table {...getTableProps()}>
+		<Container>
+            <NavBar onClick={onClick} />
+            <ContainerTable>
+            <table {...getTableProps()}>
 				<thead>
 					{headerGroups.map(
 						(headerGroup, bodyKeyStaticElements) => (
@@ -77,11 +78,12 @@ const Table = ({ columns, data,onClick }:TableProps) => {
 						);
 					})}
 				</tbody>
-			</table>
+                </table>
+            </ContainerTable>
 			<ContainerPagination>
 				<PreviewPage src={IconPreviewPage} /> <Page selected>1</Page><Page>2</Page><NextPage src={IconNextPage} />
 			</ContainerPagination>
-		</ContainerTable>
+		</Container>
 	);
 };
 

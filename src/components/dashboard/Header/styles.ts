@@ -6,10 +6,11 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: baseline;
 
-  @media (max-width: 810px) {
-    & {
-      flex-direction: column;
-    }
+  @media (max-width: 860px) {
+    margin-top: 14px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
 `;
 
