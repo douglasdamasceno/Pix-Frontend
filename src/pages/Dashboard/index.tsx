@@ -34,6 +34,7 @@ export default function App() {
           setShowModal={setShowAddSaldo}
         >
           <AddSaldo
+            data={data}
             addValue={setData}
             onCloseModal={openAddSaldo}
             onOpenQRCode={openModalShowQRCode}

@@ -15,27 +15,30 @@ interface AmountProps {
 }
 
 interface IAddAmount{
+  data: AmountProps[];
   onCloseModal: () => void;
   onOpenQRCode: () => void;
-  addValue: ([] :AmountProps[]) => void;
+  addValue: ([]:AmountProps[]) => void;
 }
 
-export default function AddSaldo({onCloseModal,onOpenQRCode,addValue}:IAddAmount) {
+export default function AddSaldo({onCloseModal,onOpenQRCode,addValue,data}:IAddAmount) {
   const [formPayment, setFormPayment] = useState("");
   const [amount, setAmount] = useState("");
   
   const handleGRCode = () => {
     onCloseModal();
     onOpenQRCode();
-    addValue(prev => [...prev, {
-      id: prev.length + 1,
+    addValue([...data,
+      {
+      id: data.length + 1,
       destino: "Nova despensa",
       valor: amount,
       solicitacao: "20/05/2022 20:00",
       pagamentos: formPayment,
       vencimento: "22/08/2022",
       status: "Em pagamento",
-      }]);
+    }
+    ]);
   }
 
   return (
