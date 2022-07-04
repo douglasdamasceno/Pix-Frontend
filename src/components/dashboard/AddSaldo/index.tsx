@@ -28,19 +28,21 @@ export default function AddSaldo({onCloseModal,onOpenQRCode,addValue,data}:IAddA
   const handleGRCode = () => {
     onCloseModal();
     onOpenQRCode();
+    const timeElapsed = Date.now();
+    const today = new Date(timeElapsed);
     addValue([...data,
       {
       id: data.length + 1,
       destino: "Nova despensa",
-      valor: amount,
-      solicitacao: "20/05/2022 20:00",
+      valor: `R$ ${amount}`,
+      solicitacao: today.toLocaleDateString(),
       pagamentos: formPayment,
       vencimento: "22/08/2022",
       status: "Em pagamento",
     }
     ]);
   }
-
+  console.log(formPayment);
   return (
     <Container>
       <Title>Adicionar saldo</Title>
@@ -51,10 +53,12 @@ export default function AddSaldo({onCloseModal,onOpenQRCode,addValue,data}:IAddA
           value={formPayment}
           onChange={setFormPayment}
         >
+          <option value="" disabled>Selecione um pagamento</option>
           <option value="PIX">PIX</option>
           <option value="TED">TED</option>
         </PaymentMethod>           
         <Input
+          type="number"
           label='Valor'
           value={amount}
           onChangeAmount={setAmount}

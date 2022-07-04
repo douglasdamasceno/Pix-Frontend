@@ -2,7 +2,7 @@ const data = [
   {
     id: 1,
     destino: "Despesa",
-    valor: "R$50,00",
+    valor: "R$ 50,00",
     solicitacao: "28/02/2022 23:30",
     pagamentos: "PIX/Ted",
     vencimento: "28/02/2022",
@@ -11,7 +11,7 @@ const data = [
   {
     id: 2,
     destino: "Despesa",
-    valor: "R$150,00",
+    valor: "R$ 150,00",
     solicitacao: "28/02/2022 23:30",
     pagamentos: "PIX/Ted",
     vencimento: "28/02/2022",
