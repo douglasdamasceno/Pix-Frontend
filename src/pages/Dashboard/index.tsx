@@ -60,7 +60,7 @@ export default function App() {
           <SideBar />
           <Main>
             <Header />
-              <Table columns={columns} data={data} onClick={openAddSaldo} />
+              <Table search={search} columns={columns} data={data} onClick={openAddSaldo} />
           </Main>
         </Container>
       </>

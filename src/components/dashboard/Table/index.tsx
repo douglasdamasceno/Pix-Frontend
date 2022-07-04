@@ -1,4 +1,4 @@
-import { useTable, useSortBy } from "react-table";
+import { useTable, useSortBy, useGlobalFilter } from "react-table";
 import IconSort from "../../../assets/sort.svg";
 import IconPreviewPage from "../../../assets/Pagination-left.svg";
 import IconNextPage from "../../../assets/Pagination-right.svg";
@@ -19,22 +19,31 @@ import NavBar from "./NavBar";
 interface TableProps {
   columns: any;
   data: any;
+  search:string;
   onClick: () => void;
 }
 
 const Table = ({ columns, data, onClick }: TableProps) => {
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable(
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+    setGlobalFilter,
+  } = useTable(
       {
         columns,
         data,
+		
       },
-      useSortBy
+      useGlobalFilter,
+      useSortBy,
     );
 
   return (
     <Container>
-      <NavBar onClick={onClick} />
+      <NavBar onChangeSearch={setGlobalFilter} onClick={onClick} />
       <ContainerTable>
         <table {...getTableProps()}>
           <thead>
@@ -44,7 +53,6 @@ const Table = ({ columns, data, onClick }: TableProps) => {
                 key={bodyKeyStaticElements}
               >
                 {headerGroup.headers.map((column, bodyKeyMainElements) => (
-                  // @ts-expect-error getSortByToggleProps
                   <th {...column.getHeaderProps(column.getSortByToggleProps())}
                     key={bodyKeyMainElements}
                   >

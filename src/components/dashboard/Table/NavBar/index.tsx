@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Date from "../../../../assets/calendar.svg"
 import Button from '../../../ui/Button';
 import InputWithIcon from '../../../ui/InputWithIcon';
@@ -5,14 +6,15 @@ import { Container, ContainerInputions } from "./styles";
 
 interface NavBarProps {
   onClick: () => void;
+  onChangeSearch: (e :string) => void;
  }
 
-export default function NavBar({onClick}:NavBarProps) {
+export default function NavBar({ onClick ,onChangeSearch }: NavBarProps) {
   return (
     <Container>
       <ContainerInputions>
-        <InputWithIcon />
-        <InputWithIcon icon={Date} placeholder="Pesquisar data" />
+        <InputWithIcon onChangeFilter={onChangeSearch} />
+        <InputWithIcon onChangeFilter={onChangeSearch} icon={Date} placeholder="Pesquisar data" />
       </ContainerInputions>
 
       <Button
