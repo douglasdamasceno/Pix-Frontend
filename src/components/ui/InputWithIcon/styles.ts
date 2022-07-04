@@ -13,6 +13,12 @@ export const Container = styled.div`
 
   border: 1px solid ${({ theme }) => theme.colors.border_color};
   border-radius: 8px;
+
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
 `;
 export const Input = styled.input`
   border: none;
@@ -28,6 +34,7 @@ export const Input = styled.input`
     outline: none;
   }
 `;
+
 export const Icon = styled.img`
   cursor: pointer;
   width: 24px;

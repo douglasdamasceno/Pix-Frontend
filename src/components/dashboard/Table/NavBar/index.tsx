@@ -14,7 +14,7 @@ export default function NavBar({ onClick ,onChangeSearch }: NavBarProps) {
     <Container>
       <ContainerInputions>
         <InputWithIcon onChangeFilter={onChangeSearch} />
-        <InputWithIcon onChangeFilter={onChangeSearch} icon={Date} placeholder="Pesquisar data" />
+        <InputWithIcon type="date" onChangeFilter={onChangeSearch} icon={Date} placeholder="Pesquisar data" />
       </ContainerInputions>
 
       <Button
